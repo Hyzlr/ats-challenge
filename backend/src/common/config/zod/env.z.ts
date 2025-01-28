@@ -14,6 +14,9 @@ export const envValidationSchema = z.object({
   DATABASE_USERNAME: z.string().min(1),
   DATABASE_PASSWORD: z.string().min(1),
   DATABASE_NAME: z.string().min(1),
+
+  // API keys
+  OPENAI_API_KEY: z.string().min(1)
 });
 
 export type ValidatedEnvs = z.infer<typeof envValidationSchema>;

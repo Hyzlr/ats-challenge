@@ -1,5 +1,5 @@
 {
-  "name": "eagle-nest",
+  "name": "ats-bckend",
   "version": "0.0.1",
   "description": "",
   "author": {
@@ -17,13 +17,8 @@
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "generate:migrations": "bun drizzle-kit generate",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test:app": "jest --passWithNoTests",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "seed": "ts-node ./prisma/seed.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -35,9 +30,9 @@
     "@nestjs/core": "^10.4.13",
     "@nestjs/platform-fastify": "^10.4.13",
     "@nestjs/swagger": "^7.4.2",
-    "drizzle-orm": "^0.33.0",
-    "drizzle-zod": "^0.5.1",
-    "postgres": "^3.4.5",
+    "@prisma/client": "^6.2.1",
+    "openai": "^4.80.1",
+    "prisma": "^6.2.1",
     "reflect-metadata": "^0.2.2",
     "rxjs": "^7.8.1",
     "zod": "^3.23.8"
