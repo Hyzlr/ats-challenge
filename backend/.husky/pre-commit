@@ -1,0 +1,6 @@
+rm -rf dist
+bun lint
+bun build:app
+bun test:app
+bun fix:envfiles
+git add .
